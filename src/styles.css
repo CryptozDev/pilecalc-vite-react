@@ -86,7 +86,7 @@ h1 {
 
 .tabs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   padding: 6px;
   border-radius: 18px;
@@ -352,4 +352,10 @@ h1 {
   margin-top: 6px;
   color: #7c2d12;
   font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
 }
